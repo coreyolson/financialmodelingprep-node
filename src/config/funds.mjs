@@ -3,7 +3,7 @@ export default [
 
     // ETF Holdings and Information
     { version: 'v4', name: 'etfHoldingsByDate', path: (symbol) => `etf-holdings/portfolio-date?symbol=${symbol}` },
-    { version: 'v4', name: 'etfHoldings', path: (date, symbol) => `etf-holdings?date=${date}&symbol=${symbol}` },
+    { version: 'v4', name: 'etfHoldings', path: (symbol, date) => `etf-holdings?date=${date}&symbol=${symbol}` },
     { version: 'v3', name: 'etfHolder', path: (symbol) => `etf-holder/${symbol}` },
     { version: 'v4', name: 'etfInfo', path: (symbol) => `etf-info?symbol=${symbol}` },
     { version: 'v3', name: 'etfSectorWeightings', path: (symbol) => `etf-sector-weightings/${symbol}` },

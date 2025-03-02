@@ -1,5 +1,5 @@
-import FinancialModelingPrepClient from '../src/index.js';
-import constituents from '../src/config/constituents.js';
+import FinancialModelingPrepClient from '../src/index.mjs';
+import constituents from '../src/config/constituents.mjs';
 
 describe('FinancialModelingPrepClient', () => {
     let client;

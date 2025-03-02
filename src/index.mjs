@@ -103,9 +103,9 @@ export default class FinancialModelingPrepClient {
         
         // Return a promise that races between the fetch request and a timeout
         return Promise.race([
-
+                        
             // Fetch promise
-            fetch(url).then(response => {
+            fetch(url).then(async (response) => {
 
                 // Throw an error if the response is not OK
                 if (!response.ok) {
@@ -117,8 +117,11 @@ export default class FinancialModelingPrepClient {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
 
-                // Return the parsed JSON data
-                return response.json();
+                // Parse the JSON response
+                const data = await response.json();
+                
+                // Return Parsed Data
+                return data;
 
             // Fetch Failure
             }),
